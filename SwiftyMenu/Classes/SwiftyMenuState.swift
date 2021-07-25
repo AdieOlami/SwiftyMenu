@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
 /// Type describing the current state of `SwiftyMenu`.
 public enum SwiftyMenuState {

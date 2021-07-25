@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
 /// Type describing the Animation Styles used to create the animation of Expanding and Collapsing `SwiftyMenu`.
 public enum AnimationStyle {

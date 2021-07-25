@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
 /// `SwiftyMenuDisplayable` is the markable interface to allow custom types to be used with SwiftyMenu.
 public protocol SwiftyMenuDisplayable {

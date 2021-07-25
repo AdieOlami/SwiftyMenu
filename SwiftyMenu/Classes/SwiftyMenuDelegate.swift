@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
 /// `SwiftyMenuDelegate` is the delegate interface to delegate different actions of SwiftyMenu.
 public protocol SwiftyMenuDelegate: AnyObject {
