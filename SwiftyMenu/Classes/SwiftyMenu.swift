@@ -31,7 +31,7 @@ final public class SwiftyMenu: UIView {
     
     // MARK: - IBOutlets
     
-    @IBOutlet public var heightConstraint: NSLayoutConstraint!
+    public var heightConstraint: NSLayoutConstraint?
     
     // MARK: - Public Properties
     
@@ -407,7 +407,7 @@ extension SwiftyMenu {
     private func expandSwiftyMenu() {
         delegate?.swiftyMenu(willExpand: self)
         self.willExpand()
-        heightConstraint.constant = attributes.height.listHeightValue == 0 || !attributes.scroll.isEnabled || (CGFloat(Double(attributes.rowStyle.rowStyleValues.height) * Double(items.count + 1)) < CGFloat(attributes.height.listHeightValue)) ? CGFloat(Double(attributes.rowStyle.rowStyleValues.height) * Double(items.count + 1)) : CGFloat(attributes.height.listHeightValue)
+        heightConstraint?.constant = attributes.height.listHeightValue == 0 || !attributes.scroll.isEnabled || (CGFloat(Double(attributes.rowStyle.rowStyleValues.height) * Double(items.count + 1)) < CGFloat(attributes.height.listHeightValue)) ? CGFloat(Double(attributes.rowStyle.rowStyleValues.height) * Double(items.count + 1)) : CGFloat(attributes.height.listHeightValue)
 
         switch attributes.expandingAnimation {
         case .linear:
@@ -434,7 +434,7 @@ extension SwiftyMenu {
     private func collapseSwiftyMenu() {
         delegate?.swiftyMenu(willCollapse: self)
         self.willCollapse()
-        heightConstraint.constant = CGFloat(attributes.headerStyle.headerStyleValues.height)
+        heightConstraint?.constant = CGFloat(attributes.headerStyle.headerStyleValues.height)
         
         switch attributes.collapsingAnimation {
         case .linear:
